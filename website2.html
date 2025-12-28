@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Logo & Favicon -->
+    <link rel="icon" type="image/png" href="vent-buddy-logo.png">
+    <link rel="apple-touch-icon" href="vent-buddy-logo.png">
+    <meta name="theme-color" content="#ffffff">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: title + meta description -->
+  <title>Vent Buddy – 1:1 Venting & Emotional Support Calls</title>
+  <meta
+    name="description"
+    content="Vent Buddy offers warm, 60-minute confidential video calls where you can vent, unpack your feelings, and feel heard by a real human listener."
+  />
+  <meta
+    name="keywords"
+    content="vent buddy, need to vent, emotional support call, one on one listener, confidential venting session, talk to someone, non judgmental listening"
+  />
+  <meta name="author" content="Vent Buddy" />
+
+  <!-- Tell Google it can index and follow links on this page -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph (for nicer previews when you share the link) -->
+  <meta property="og:title" content="Vent Buddy – A Safe Space to Vent" />
+  <meta
+    property="og:description"
+    content="Book a 60-minute confidential video call with a warm, non-judgmental vent buddy and finally say everything you’ve been holding in."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta property="og:image" content="https://your-domain.com/ventbuddy-social-card.png" />
+
+  <style>
+    :root {
+      /* Warmer, cozier palette */
+      --bg: #fff7f4;
+      --primary: #ff7b8a;
+      --primary-dark: #e06474;
+      --text: #3b2a35;
+      --card: #ffffff;
+      --accent: #ffe0ef;
+      --accent-soft: #ffeef6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top left, #ffeef6 0, #fff7f4 45%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary-dark); text-decoration: none; }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
+    }
+
+    /* HERO */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px;
+      color: var(--primary-dark);
+      font-family:  "Bradley Hand", "Comic Sans MS", cursive;
+
+    }
+
+    .hero-text p {
+      margin: 0;
+      max-width: 520px;
+      font-size: 1rem;
+    }
+
+
+
+    .hero-photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .hero-photo {
+      width: 190px;
+      height: 190px;
+      border-radius: 32px;
+      overflow: hidden;
+      border: 5px solid #ffffff;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      background: #ddd;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-heart {
+      position: absolute;
+      right: -6px;
+      bottom: -8px;
+      background: var(--primary);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    section {
+      margin-bottom: 28px;
+      background: var(--card);
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+    }
+
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+
+    li { margin-bottom: 5px; }
+
+    .soft-note {
+      font-size: 0.9rem;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      padding: 8px 10px;
+      margin-top: 4px;
+    }
+
+    /* Illustrations */
+    .support-illustration {
+      background: var(--accent-soft);
+      border-radius: 4px;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .support-illustration img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      display: block;
+    }
+
+    .support-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ffffffaa;
+      border: 1px dashed rgba(0,0,0,0.04);
+      font-size: 0.78rem;
+    }
+
+    /* Pricing & booking */
+    .price-tag {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .price-note {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 11px 26px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      font-size: 0.98rem;
+      box-shadow: 0 12px 30px rgba(255, 123, 138, 0.35);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .calendly-block {
+      margin-top: 10px;
+      background: var(--accent-soft);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .testimonial-card {
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 12px 12px 10px;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: "“";
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      font-size: 2.4rem;
+      color: #f5c0d0;
+      opacity: 0.6;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    /* TikTok button */
+    .social-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .social-label {
+      font-size: 0.9rem;
+      color: #7d5e6a;
+    }
+
+    .tiktok-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #000000;
+      color: #ffffff;
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .tiktok-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background:
+        radial-gradient(circle at 30% 30%, #ff0050 0, #ff0050 40%, transparent 41%),
+        radial-gradient(circle at 70% 70%, #00f2ea 0, #00f2ea 40%, transparent 41%);
+      position: relative;
+    }
+
+    .tiktok-icon::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: 3px;
+      background: #000000;
+    }
+
+   
+    .vb-footer {
+  margin-top: 40px;
+  padding: 16px 0 24px;
+  border-top: 1px solid #ffe0ef;
+  background-color: #fff7f4;
+}
+
+.vb-footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.vb-footer-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.vb-footer-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+
+    @media (max-width: 768px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-text p { margin: 0 auto; }
+      .hero-photo-wrap { order: -1; }
+      .two-col { grid-template-columns: 1fr; }
+      section { padding: 18px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HERO -->
+    <header>
+
+        
+      <div class="hero-text">
+        <h1>Need to vent? I’m here to listen. 💗</h1>
+        <p>
+          1:1, judgement‑free listening space with a real human who cares.
+          A cozy, no-pressure space to say the things you’ve been holding in.
+          Bring your overthinking, your “is this silly?” thoughts, your big feelings, you’re welcome here.
+        </p>
+        
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <!-- Replace src with your headshot path -->
+          <img src="professional_headshot.png" alt="Photo of your vent buddy" />
+        </div>
+        <div class="hero-heart">Hi!, I’m your vent buddy 🤝</div>
+      </div>
+    </header>
+
+    <!-- What it is / is not -->
+    <section>
+      <h2>What this space is (and isn’t)</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            Vent Buddy is a friendly, one‑on‑one call where you get to talk honestly,
+            be messy, and feel heard by a real person who actually listens.
+          </p>
+          <ul>
+            <li>1:1 video call focused fully on you for 60 minutes.</li>
+            <li>Gentle questions, reflections, and validation. No “fixing”.</li>
+            <li>Confidential space: what you share stays between us.</li>
+            <li>Great for stress, burnout, life changes, overthinking, or “I just need to rant.”</li>
+            <li>Especially helpful when something heavy is sitting on your chest and you don’t know who to open up to.</li>
+            <li>Supportive when you’re struggling to find the words for what you’re feeling but still need someone to sit with you in it.</li>
+          </ul>
+          <div class="soft-note">
+            Not sure if your thing is “big enough” to talk about? It is. If it’s heavy on
+            your chest, it’s welcome here.
+          </div>
+        </div>
+        <div>
+          <div class="support-illustration">
+            <!-- Replace src with an illustration of people supporting each other -->
+            <img src="illustration-support.png" alt="Two people talking and offering support" />
+          </div>
+          <h3 style="margin:14px 0 4px; font-size:1rem;">This is not:</h3>
+          <ul style="margin-top:4px;">
+            <li>Therapy, coaching, or professional mental health care.</li>
+            <li>Crisis support or emergency assistance.</li>
+            <li>Romantic, sexual, or flirtatious in any way.</li>
+          </ul>
+          <p style="font-size:0.85rem; margin-top:4px;">
+            If you’re in crisis or feel unsafe, please reach out to local
+            emergency services or a crisis hotline in your area right away. 💜
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Session & booking -->
+    <section>
+      <h2>How a session works</h2>
+      <div class="two-col">
+        <div>
+          <p class="price-tag">$20</p>
+          <p><strong>60 minutes</strong> of being heard, seen, and not judged – over a relaxed video call.</p>
+          <p class="price-note">
+            We’ll meet on a video call (camera on or off is okay). You talk, vent, ramble;
+            I listen and hold the space with you.
+          </p>
+          <a
+            class="btn-primary"
+            href="https://calendly.com/agg-shambhavi/vent-buddy-hour"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💻 Book your vent session
+          </a>
+        </div>
+        <div>
+          <div class="support-illustration">
+            <!-- Replace src with an illustration of someone on a laptop call -->
+            <img src="illustration-call.png" alt="Person talking on a laptop video call" />
+            <p style="margin:4px 0 2px;">
+              Step 1: Pick a time that works for you.  <br>
+              Step 2: Get your call link in email.  <br>
+              Step 3: Join with your drink of choice and let it all out. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+      <h2>Little love notes from past sessions</h2>
+      <p style="margin-bottom:8px; font-size:0.95rem;">
+        Names & details changed for privacy, feelings 100% real. 💬
+      </p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>
+            “I had about an hour long conversation with her. She is a very good listener. Very empathetic and kind, I generally am difficult to talk to and very hard to open up but her kindness helped me do that. After our discussion i felt lighter like talking to an old friend who is very wise.”
+          </p>
+          <div class="testimonial-name">— A., 24</div>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            “If you need a non judgemental space, a patient ear and a warm presence, i would totally recommend Shambhavi Aggarwal. She has a very warm and comforting presence that can make you feel at ease. Loved my session with her.”
+          </p>
+          <div class="testimonial-name">— S., 27</div>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            “She didn’t try to fix everything. She just stayed with me in it,
+            which somehow made everything feel less heavy.”
+          </p>
+          <div class="testimonial-name">— R., 25</div>
+        </div>
+      </div>
+    </section>
+        <!-- About Me -->
+    <section id="about-me">
+      <h2>Who’s on the other side of the call?</h2>
+      <div >
+        <div>
+          <p>
+            Hi, I’m a 25‑year‑old woman who has always needed to <em>vent first</em> in
+            crisis moments. Before jumping to solutions, I’ve found I need to let my
+            emotions out, complain a little, and put words to what I’m actually
+            feeling.
+          </p>
+          <p>
+            As I talk things through, I usually start seeing my own solutions more
+            clearly. But for a long time, I felt lonely doing that. I didn’t want to
+            overwhelm the people I love or feel like “that person” who only
+            complains and isn’t grateful enough for life.
+          </p>
+          <p>
+            Those experiences are what inspired Vent Buddy. I know how heavy it can
+            feel to carry everything alone, and how powerful it is to have someone
+            who simply lets you be honest, messy, and real for a while.
+          </p>
+          <p>
+            Professionally, I’m a machine learning engineer, but when we’re on a
+            call, I’m just your vent buddy, holding space so your thoughts don’t
+            have to sit on your chest all day.
+          </p>
+          <p >
+            I’m slowly building my social media presence, so feel free to connect
+            with me there as I grow this little corner of the internet. 🌷
+          </p>
+        </div>
+        <div class="social-row">
+            <span class="social-label">Come say hi on TikTok:</span>
+            <a
+              href="https://www.tiktok.com/@ventbuddy15"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="tiktok-btn"
+            >
+              <span class="tiktok-icon"></span>
+              <span>@vent-buddy</span>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <footer class="vb-footer">
+  <div class="vb-footer-inner">
+    <img
+      src="vent-buddy-logo.png"
+      alt="Vent Buddy logo"
+      class="vb-footer-logo"
+    />
+    <span class="vb-footer-text">Vent Buddy</span>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
